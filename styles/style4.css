@@ -1,0 +1,32 @@
+h1,h2,h3
+{
+    font-family: "comic sans ms", arial, 'sans serif'; 
+}
+
+p,table,li,address
+{
+    font-family: "comic sans ms", arial, 'sans serif'; 
+    margin-left: 10pt;
+}
+
+p,li,th,td
+{
+    font-size: 75%;
+}
+
+h1,h2,h3,hr
+{
+    color:saddlebrown;
+}
+
+a:link     { color:saddlebrown }
+a:visited  { color:saddlebrown }
+a:active   { color:red }
+a:hover    { color:red }
+
+body
+{
+    background-color: #EFE7D6;
+}
+
+

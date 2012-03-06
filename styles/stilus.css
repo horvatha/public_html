@@ -1,0 +1,43 @@
+h1,h2,h3
+{
+    font-family: arial, 'sans serif'; 
+    margin-left: 2cm
+}
+
+p,table,li,
+{
+    font-family: arial, 'sans serif'; 
+}
+
+body
+{
+    background-image: url("../images/narancsszegely.png");
+    background-repeat: repeat-y;
+}
+
+p,li,th,td
+{
+    font-size: 85%;
+}
+
+p
+{
+    margin: 2cm;
+}
+
+a
+{
+    text-decoration: none
+}
+
+h1,h2,h3,hr {color:#483d8b;}
+
+
+pre
+{color:darkred}
+
+a:link    {color:blue}
+a:visited {color:darkblue}
+a:active  {color:red}
+a:hover   {color:gold}
+

@@ -1,0 +1,83 @@
+- HTML Weboldal leírására szolgáló nyelv
+- HTTP Egy protokoll, mely megadja, hogyan kell lekérni egy weboldalt.
+
+CSS (Cascading Style Sheets)
+============================
+
+Az egyes weboldalakon a formázásokat célszerű különválasztani a tartalomtól.
+Erre való a CSS.
+
+CSS-definíciókkal lehet megadni elemek (p, h, pre, body, a, hr):
+
+- háttérszín, betűszín, betuméret
+- margóit
+- kereteit
+- hátterkép (oldalét is: body)
+
+Egyes oldalakon  felhasználó választhat  kinézetek (CSS-fájlok) közül.
+A tartalom és  kinézet előállítás különböző képességeket igényel: az
+egyik  programozóit, a másik művészetit.
+
+Elhelyezkedhetnek:
+
+- magukban az elemekben
+  <p style="color=red; margin=2cm">
+  (Egyetlen elem színét és margóját állítja be,
+  ennyi lesz a margó mind a négy oldalon (fent, lent, balra, jobbra).)
+- a fejlécben 
+- külön CSS-fájlban, és  a fejlécben hivatkozok rá.
+
+Egy részlet egy CSS-fájlból:
+
+p,li
+{
+    font-size: 85%;
+    color: red;
+}
+
+Ez a bekezdések (p) és listaelemek (li) színét és méretét állítja be.
+
+Ha több helyen van megadva érték (pl. színre), akkor a legutolsónak
+megadott érték számít. A sorrendnél figyelembe kell venni, hogy a
+css-fájlt vizsgálja legelőször legelöl, utána a fejlécbeli stíluslapot,
+végül az elem stílusát (a body-ban).
+
+
+Listák
+=======
+
+- rendezett (ordered list) <ol>
+- rendezetlen (unordered)  <ul>
+
+Az egyes elemek előtt <li> van.
+
+URI
+====
+kb. = URL
+
+http://www.arek.uni-obuda.hu/~horvatha/python/index.html
+
+http://   protokoll
+www.arek.uni-obuda.hu/ szerver neve
+~horvatha/  felhasználó neve
+python/index.html a fájl elérési útvonala
+
+Az index.html index.htm index.php elhagyható, ha van az adott
+könyvtárban ilyen, akkor mindig az jelenik meg.
+
+KompoZer szerkesztő
+===================
+Megnéztük a használatát. Otthonra telepítsék fel!
+A Firefoxhoz pedig a firebug kiegészítőt:
+http://kompozer.net/
+http://pcworld.hu/kompozer-08-20100302.html
+http://getfirebug.com/ 
+
+A weboldalnak szánjunk egy külön könyvtárat, és minden képet és
+hivatkozott fájlt rakjunk bele.
+
+A képeket mindig relatív útvonallal adjuk meg (ne
+c://Documents.../akarmi.jpg, hanem pl. kepek/akarmi.jpg )
+
+Weben használható képformátumok:
+.jpg .png .gif (.svg)

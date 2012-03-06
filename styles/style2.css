@@ -1,0 +1,35 @@
+p,table,li,h1,h2,h3
+{
+font-family: verdana, arial, 'sans serif'; 
+}
+
+p, h1, h2, h3, table, li, hr
+{
+margin-left: 10pt;
+}
+
+p,li,th,td
+{
+font-size: 75%;
+}
+
+body
+{
+#ffffff;
+}
+
+h1,h2,h3,hr
+{
+color: firebrick;
+}
+
+a:link {COLOR: firebrick;}
+a:visited {COLOR: firebrick;}
+a:active {COLOR: navy;}
+a:hover {COLOR: navy;}
+
+a.content:link {COLOR: seashell;}
+a.content:visited {COLOR: seashell;}
+a.content:active {COLOR: seashell;}
+a.content:hover {COLOR: papayawhip;}
+

@@ -1,0 +1,12 @@
+p {
+  background-color: #99ff99;
+  text-decoration: underline;
+}
+body {
+  background-image: url(../images/background.jpg);
+}
+table {
+  font-size: 22px;
+  color: #993399;
+  font-family: "Times New Roman",Times,serif;
+}

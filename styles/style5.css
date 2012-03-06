@@ -1,0 +1,26 @@
+h1,h2,h3
+{
+    font-family: "lucida calligraphy", arial, 'sans serif'; 
+}
+
+p,table,li,
+{
+    font-family: "lucida calligraphy", arial, 'sans serif'; 
+    margin-left: 10pt;
+}
+
+body
+{
+    background-color:#fffaf0;
+}
+
+p,li,th,td
+{
+    font-size: 75%;
+}
+
+h1,h2,h3,hr {color:#483d8b;}
+
+table {border-style:outset}
+li {list-style: square;)
+

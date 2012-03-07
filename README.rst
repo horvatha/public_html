@@ -3,6 +3,7 @@ helyre kerül. ::
     git clone http://github.com/horvatha/public_html
 
 Frissítés::
+
     git pull
 
 CGI-vel kapcsolatos részek még a linux/postgresql könyvtárban.

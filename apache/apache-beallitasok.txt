@@ -1,0 +1,74 @@
+Telepítés
+------------
+Debian és Ubuntu alatt parancssorból::
+    sudo apt-get install apache2
+
+
+Felhasználói könyvtárak 
+------------------------
+
+Engedélyezni a userdir modult::
+        cd /etc/apache2/mods-enabled
+        ln -s ../mods-available/userdir.conf
+        ln -s ../mods-available/userdir.load
+
+Python cgi
+------------------------
+
+A végén található Directory bejegyzést (cgi-bin) beszúrni
+a userdir.conf-ba::
+    <IfModule mod_userdir.c>
+            UserDir public_html
+            UserDir disabled root
+
+            <Directory /home/*/public_html>
+                    AllowOverride FileInfo AuthConfig Limit Indexes
+                    Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec
+                    <Limit GET POST OPTIONS>
+                            Order allow,deny
+                            Allow from all
+                    </Limit>
+                    <LimitExcept GET POST OPTIONS>
+                            Order deny,allow
+                            Deny from all
+                    </LimitExcept>
+            </Directory>
+
+            <Directory /home/*/public_html/cgi-bin>
+                    Options ExecCGI
+                    SetHandler cgi-script
+                    AddHandler cgi-script .py
+            </Directory>
+    </IfModule>
+
+apache2.conf-ba (mondjuk a végére)::
+    AddDefaultCharset utf-8
+
+Újraindítani az Apache-ot::
+    /etc/init.d/apache2 restart
+
+
+
+Python cgi-szkriptek írása
+-----------------------------
+
+Indulásnak le lehet szedni, cgi-bin alkönyvtárában lévő szkripteket
+futtatni::
+
+    cd   # hogy jó helyre kerüljön
+    git clone https://github.com/horvatha/public_html
+
+Azokban nincs példa a formokra, de az alábbiban.
+
+Lásd:
+http://docs.python.org/library/cgi.html
+
+Lásd még:
+------------
+A django tárolót. Leszedése::
+    bzr branch http://arek.uni-obuda.hu/repo/django
+
+később talán::
+    git clone http://github.com/horvatha/django
+
+Ebben a django/jegyzet.txt fájlt.

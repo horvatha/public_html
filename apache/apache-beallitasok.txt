@@ -68,6 +68,7 @@ Lásd még:
 A django tárolót. Leszedése::
     bzr branch http://arek.uni-obuda.hu/repo/django
 
+..
 később talán::
     git clone http://github.com/horvatha/django
 

@@ -14,8 +14,8 @@ print "Content-Type: text/html\n" ## CGI
 
 
 # Itt lehet állítani az adatbázist:
-connection = database.connect(database='diak', user='diak')
-#connection = database.connect(database='diak', user='diak', password='diak', host='localhost')
+#connection = database.connect(database='diak', user='diak')
+connection = database.connect(database='diak', user='diak', password='diak', host='localhost')
 
 cursor = connection.cursor()
 
@@ -33,7 +33,7 @@ print fejlec
 print "<h1>Képek a Harry Potter filmekből</h1>"
 
 tablafejlec = ['Név', 'Kép', 'Képfelirat', 'Anyja neve', 'Apja neve']
-#print "\n".join(htmltabla(eredmeny, fejlec=tablafejlec))
+print "\n".join(htmltabla(eredmeny, fejlec=tablafejlec))
 
 for tabla in "szemelyek kepek kepek_szemelyek".split():
     print html(tabla, connection)

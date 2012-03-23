@@ -4,34 +4,41 @@
 """
 Lista és dátum megjelenítése CGI-ben.
 """
+from __future__ import print_function
 
-print "Content-Type: text/html\n" ## CGI
 
-print """<html>
+print("Content-Type: text/html\n") ## CGI
+
+print("""<html>
+<head>
+<title>Stíluslappal megjelenített CGI-s oldal</title>
+<link REL="stylesheet" TYPE="text/css" href="../styles/stilus.css">
+</head>
 <body>
-"""
+""")
 
-for i in range(1,101):
-  print i
+for i in range(1,30):
+  print("<p>", i, i**2, i**3, "</p>")
 
-print "<br>"
+print("<hr>")
 
 import time
 helyi = time.localtime()
-print helyi
+#print(helyi)
 
-print "<br>"
 
 ev = helyi[0]
 honap = helyi[1]
 nap = helyi[2]
-print "Év: ", ev, "<br>hónap:", honap, "nap:", nap
+print("Év: ", ev, "<b>hónap:", honap, "</b> nap:", nap)
+
+print("<hr>")
 
 import calendar
-print "<pre>"
+print("<pre>")
 calendar.prmonth(ev, honap)
-print "</pre>"
+print("</pre>")
 
-print """</body>
-</html>"""
+print("""</body>
+</html>""")
 

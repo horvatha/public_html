@@ -14,7 +14,8 @@ print "Content-Type: text/html\n" ## CGI
 
 
 # Itt lehet állítani az adatbázist:
-connection = database.connect(database='diak', user='diak', password='diak')
+connection = database.connect(database='diak', user='diak')
+#connection = database.connect(database='diak', user='diak', password='diak', host='localhost')
 
 cursor = connection.cursor()
 

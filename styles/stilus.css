@@ -13,9 +13,10 @@ body
 {
     background-image: url("../images/narancsszegely.png");
     background-repeat: repeat-y;
+    font-size: 20px;
 }
 
-p,li,th,td
+li
 {
     font-size: 85%;
 }
@@ -34,7 +35,11 @@ h1,h2,h3,hr {color:#483d8b;}
 
 
 pre
-{color:darkred}
+{
+    color:red;
+    margin-left:2.5cm;
+    font-size: 120%;
+}
 
 a:link    {color:blue}
 a:visited {color:darkblue}

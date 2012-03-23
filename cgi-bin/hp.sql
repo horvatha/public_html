@@ -83,15 +83,16 @@ CREATE OR REPLACE FUNCTION kep_beszur(szemelynev text, url text, szoveg text)
 	SELECT true;
   $$ LANGUAGE 'SQL';
 
-SELECT kep_beszur('Sirius Black',
-	'http://images4.wikia.nocookie.net/harrypotter/images/thumb/d/d6/James_Sirius_youth.jpg/220px-James_Sirius_youth.jpg',
-'Fiatalkorában, jobbra mellette Harry apja, James');
+SELECT kep_beszur('Harry Potter',
+	'http://images3.wikia.nocookie.net/harrypotter/images/thumb/7/7b/Harryronhermoine.jpg/200px-Harryronhermoine.jpg',
+	'Ronnal és Hermionéval');
+INSERT INTO kepek_szemelyek VALUES (2, 1, 'Harryvel és Hermionéval');
 SELECT kep_beszur('Harry Potter',
 	'http://images3.wikia.nocookie.net/harrypotter/images/thumb/2/2a/HarryQuillSS.jpg/170px-HarryQuillSS.jpg',
 	'Első éve a Roxsfortban.');
-SELECT kep_beszur('Harry Potter',
-	'http://images3.wikia.nocookie.net/harrypotter/images/thumb/7/7b/Harryronhermoine.jpg/200px-Harryronhermoine.jpg',
-	'Ron, Harry és Hermione');
+SELECT kep_beszur('Sirius Black',
+	'http://images4.wikia.nocookie.net/harrypotter/images/thumb/d/d6/James_Sirius_youth.jpg/220px-James_Sirius_youth.jpg',
+'Fiatalkorában, jobbra mellette Harry apja, James');
 SELECT kep_beszur('Ginevra',
 	'http://z.about.com/d/movies/1/0/O/5/P/harrypotter5pic35.jpg',
 	'Arckép');

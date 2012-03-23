@@ -68,7 +68,7 @@ SELECT szemely_beszur ('Sirius Black', 'Orion Black', 'Walburga Black');
 SELECT szemely_beszur ('Regulus Black', 'Orion Black', 'Walburga Black');
 SELECT szemely_beszur ('Draco Malfoy', 'Lucius Malfoy', 'Narcissa Black');
 SELECT szemely_beszur ('Scorpius Malfoy', 'Draco Malfoy', 'Astoria Greengrass');
-SELECT szemely_beszur ('Remus Lupin');
+SELECT szemely_beszur ('James Potter');
 
 CREATE OR REPLACE FUNCTION kep_beszur(szemelynev text, url text, szoveg text)
   RETURNS boolean

@@ -1,5 +1,13 @@
+PostgreSQL kezelése
+--------------------
+Indítás psql paranccsal, jelszó: diak.
 \d
 \d szemelyek
+
+
+SQL-lekérdezések
+-----------------
+
 SELECT * FROM szemelyek;
 SELECT nev, anyanev FROM szemelyek;
 SELECT nev, anyanev FROM szemelyek WHERE szemelykod < 4;

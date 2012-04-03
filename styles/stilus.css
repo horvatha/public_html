@@ -1,14 +1,3 @@
-h1,h2,h3
-{
-    font-family: arial, 'sans serif'; 
-    margin-left: 2cm
-}
-
-p,table,li,
-{
-    font-family: arial, 'sans serif'; 
-}
-
 body
 {
     background-image: url("../images/narancsszegely.png");
@@ -16,23 +5,28 @@ body
     font-size: 20px;
 }
 
-li
+h1,h2,h3
 {
-    font-size: 85%;
+    color:darkblue;
+    background-color:lightgrey;
+    margin: 0.5cm 2cm;
+    text-align: center;
+    font-family: arial, 'sans serif'; 
 }
 
 p
 {
-    margin: 2cm;
+    margin: 5px 75px;
 }
 
-a
+p.kulonos
 {
-    text-decoration: none
+    margin: 10px 80px;
+    padding: 10px;
+    border: solid orange;
+    text-align: center;
+    background-color: gold;
 }
-
-h1,h2,h3,hr {color:#483d8b;}
-
 
 pre
 {
@@ -41,8 +35,40 @@ pre
     font-size: 120%;
 }
 
-a:link    {color:blue}
-a:visited {color:darkblue}
-a:active  {color:red}
-a:hover   {color:gold}
+li
+{
+    font-size: 85%;
+}
+
+div
+{
+    background-color: rgb(255, 128, 128);
+    margin: 12px 85px;
+    border: 2px solid blue;
+    padding: 10px 20px;
+    width:360px;
+    text-align: center;
+}
+
+div.vilagos
+{
+    background-color: pink;
+    border: dotted lightgreen;
+    margin: 20px auto;
+}
+
+.vilagos
+{
+    color: grey;
+}
+
+a
+{
+    text-decoration: none
+}
+
+a:link    {color:blue;}
+a:visited {color:green;}
+a:active  {color:red;}
+a:hover   {color:gold;}
 

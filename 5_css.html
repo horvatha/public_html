@@ -1,3 +1,4 @@
+<DOCTYPE html>
 <html>
 <head>
 <title>Stíluslappal megjelenített oldal</title>
@@ -8,16 +9,28 @@
 <h1>XY  honlapja</h1>
 
 <h2>Alapvető formázások és linkek létrehozása</h2>
-<a name="alap"></a>
+
+<p>A címsorokra szabályok találhatóak a css fájlban, azért ilyenek.</p>
 
 <p>
 Ez egy bekezdés (paragraph).
+Bekezdés.  Bekezdés.  Bekezdés.  Bekezdés.
+Bekezdés.  Bekezdés.  Bekezdés.  Bekezdés.  Bekezdés.
+Bekezdés.  Bekezdés.  Bekezdés.  Bekezdés.
+Bekezdés.  Bekezdés.  Bekezdés.  Bekezdés.  Bekezdés.
 </p>
 
-<p>
-<b>Vastag betűs (bold)</b>, <i>dőlt (italics)</i>
+<p class="kulonos">
+Ez a bekezdés a <i>kulonos</i> <b>osztályban</b> van, ezért néz ki máshogy:
+p.kulonos a css-ben.
+Bekezdés.  Bekezdés.  Bekezdés.  Bekezdés.
+Bekezdés.  Bekezdés.  Bekezdés.  Bekezdés.  Bekezdés.
+Bekezdés.  Bekezdés.  Bekezdés.  Bekezdés.
+Bekezdés.  Bekezdés.  Bekezdés.  Bekezdés.  Bekezdés.
+</p>
 
 <p>Az alábbinál a szöveg úgy marad, "ahogy van".</p>
+
 <pre>
 AREKAREKAREKAREKAREKAREKAREKKAREKAREKAREKAREKAREKAREK
 AREK      EKARE         AREK         AR    EKAR    EK
@@ -52,9 +65,9 @@ lehet akár kép is.
 </p>
 
 
-<hr> Ezelőtt van egy vizszintes elválasztó (horizontal rule).
+<hr>
+<p class="kulonos">Ezelőtt van egy vizszintes elválasztó (horizontal rule).</p>
 
-<a name="lista"></a>
 <h2>Listák</h2>
 
 <ul>
@@ -70,6 +83,53 @@ lehet akár kép is.
     </ol>
 </ul>
 
+<h2>div-ek és osztályok (class)</h2>
+
+<div>
+    vakvágányra döcögött végül<br>
+    a kopott vörös villamos<br>
+    kalauz és vezető nélkül<br>
+    döcögött vakvágányra végül<br>
+    a kopott vörös villamos
+</div>
+
+<div class="vilagos">
+    nem volt rakva virágos néppel<br>
+    bezzeg amikor érkezett<br>
+    bíborló színben sok beszéddel<br>
+    meg volt rakva virágos néppel<br>
+    bezzeg amikor érkezett
+</div>
+
+<p class="vilagos">
+Világos bekezdés.
+Világos bekezdés.
+Világos bekezdés.
+Világos bekezdés.
+Világos bekezdés.
+Világos bekezdés.
+Világos bekezdés.
+Világos bekezdés.
+Világos bekezdés.
+Világos bekezdés.
+Világos bekezdés.
+</p>
+
+<div>
+    <p>
+        A diveket arra használjuk, hogy csoportosítsuk a benne levő
+        dolgokat, hogy egy csoportként lehessen formázni azokat.
+    </p>
+
+    <hr>
+
+    <p>
+        Az előző bekezdés és az előző div világos osztályba vannak,
+        tehát mindkettő szürke betűs lesz (.vilagos a css-ben), de
+        csak a div lesz pöttyözött (dotted) keretű (div.vilagos a
+        css-ben).
+    </p>
+</div>
 
 </body>
 </html>

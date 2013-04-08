@@ -1,11 +1,30 @@
-CREATE TABLE
-DROP TABLE
+Mire használható az SQL-nyelv?
 
+Relációs adatbázisok esetén:
+
+1. Táblák
+a) létrehozására
+CREATE TABLE
+b) törlésére
+DROP TABLE
+c) mezőinek megváltoztatására (pl. új mező hozzáadása)
+ALTER TABLE
+
+2. A táblák tartalmának megváltoztatására
+a) beszúrás
 INSERT INTO TABLE ...
+b) frissítés (pl. egy mező bizonyos elemeit szorozzuk 1.02-vel)
 UPDATE ...
+c) bizonyos tulajdonságú sorok törlése
 DELETE 
 
+3. Adatok lekérdezésére
 SELECT
+
+4. Adott felhasználóknak jogok adása és megvonása
+GRANT
+REVOKE
+
 ---------------------------------
 
 
@@ -46,7 +65,6 @@ ORDER BY <mezőnév> [, <mezőnév2>]...
 GROUP BY <mezőnév> [, <mezőnév2>]...
 ;
 
--- TODO INNER JOIN-nál on kell feljebb.
 
 SELECT sum(darab) FROM filmek
 GROUP BY filmcim, temakod;
@@ -64,4 +82,6 @@ INSERT INTO TABLE kolcsonzesek
   (datum, filmcim)
   VALUES (2008.03.18, 'Hair');
 
--- now()
+CREATE TABLE
+Példa látható a hp.sql fájlban.
+https://github.com/horvatha/public_html/blob/master/cgi-bin/sql/hp.sql

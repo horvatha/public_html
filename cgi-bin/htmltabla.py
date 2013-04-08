@@ -33,7 +33,7 @@ def htmltabla(elemek, oszlopok_szama=None, fejlec=None, colgroup=False):
         elemek = lista
 
     sorok = []
-    sorok.append('''<table width="100%" border=1>''')
+    sorok.append('''<table border=1>\n <tr>''')
     if colgroup:
         sorok.append('''    <colgroup span=%d width=%d%%>
     </colgroup>
@@ -57,6 +57,8 @@ def htmltabla(elemek, oszlopok_szama=None, fejlec=None, colgroup=False):
         if elemsorszam % oszlopok_szama == 0:
             sorok.append(" </tr>\n <tr>")
         elemsorszam += 1
+    if sorok[-1] == " </tr>\n <tr>":
+        sorok = sorok[:-1]
     sorok.append(" </tr>\n</table>\n")
     return sorok
 
@@ -73,7 +75,11 @@ def attr_names(table, connection):
     return attr
 
 def html(table, connection):
-    print '<h2>%s tábla</h2>' % table
+    if table.endswith("*"):
+        table = table[:-1]
+        print '<h2>%s nézet</h2>' % table
+    else:
+        print '<h2>%s tábla</h2>' % table
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM %s;" % table)
     eredmeny = cursor.fetchall()

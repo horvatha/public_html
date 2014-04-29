@@ -1,6 +1,6 @@
 PostgreSQL kezelése
 --------------------
-Indítás psql paranccsal, jelszó: diak.
+Indítás psql paranccsal, jelszó: matika.
 \d
 \d szemelyek
 
@@ -19,9 +19,11 @@ SELECT nev, anyanev FROM adatok WHERE anyanev = 'Molly Prewett';
 SELECT count(nev) FROM szemelyek WHERE anyanev='Molly Prewett';
 
 INSERT INTO kepek VALUES (5, 'http://images1.wikia.nocookie.net/__cb20100123225257/harrypotter/images/4/48/Rupert_Grint_as_Ron_Weasley_(GoF-03).jpg');
+INSERT INTO kepek (url) VALUES ('http://images1.wikia.nocookie.net/__cb20100123225257/harrypotter/images/4/48/Rupert_Grint_as_Ron_Weasley_(GoF-03).jpg');
 INSERT INTO kepek_szemelyek VALUES (2, 5, 'Elegans oltonyben');
+INSERT INTO szemelyek (name, anyanev) VALUES ('XY', 'AB');
 
-Melyik működik?
+Melyik működik? (Idegen kulcsok!)
 
 DELETE FROM szemelyek WHERE szemelykod = 1;
 DELETE FROM szemelyek WHERE nev LIKE "Harry%";
